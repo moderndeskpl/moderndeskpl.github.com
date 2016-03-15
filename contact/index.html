@@ -57,11 +57,11 @@
         <div class='container'>
           <div class='row'>
             <div class='col-lg-8 col-lg-offset-2'>
-              <form id='contactForm' name='sentMessage' novalidate=''>
+              <form action='//formspree.io/lasecki.mic@gmail.com' id='contactForm' method='POST' name='sentMessage' novalidate=''>
                 <div class='row control-group'>
                   <div class='form-group col-xs-12 floating-label-form-group controls'>
-                    <label>Imię</label>
-                    <input class='form-control' data-validation-required-message='Proszę wprowadź swoje imię.' id='name' placeholder='Imię' required='' type='text'>
+                    <label>Imię i nazwisko</label>
+                    <input class='form-control' data-validation-required-message='Proszę wprowadź swoje imię i nazwisko.' id='name' name='name' placeholder='Imię i nazwisko' required='' type='text'>
                       <p class='help-block text-danger'></p>
                     </input>
                   </div>
@@ -69,23 +69,20 @@
                 <div class='row control-group'>
                   <div class='form-group col-xs-12 floating-label-form-group controls'>
                     <label>Email</label>
-                    <input class='form-control' data-validation-required-message='Proszę wprowadź swój email address.' id='email' placeholder='Email' required='' type='email'>
+                    <input class='form-control' data-validation-required-message='Proszę wprowadź swój adres email.' id='email' name='_replyto' placeholder='Email' required='' type='email'>
                       <p class='help-block text-danger'></p>
                     </input>
                   </div>
                 </div>
-                <div class='row control-group'>
-                  <div class='form-group col-xs-12 floating-label-form-group controls'>
-                    <label>Telefon</label>
-                    <input class='form-control' data-validation-required-message='Proszę wprowadź swój numer telefonu.' id='phone' placeholder='Telefon' required='' type='tel'>
-                      <p class='help-block text-danger'></p>
-                    </input>
-                  </div>
+                <div>
+                  <input name='_subject' type='hidden' value='Nowa wiadomość z ModernDesk!'>
+                  <input name='_gotcha' style='display:none' type='text'>
+                  <input name='_next' type='hidden' value='//moderndesk.pl/contact/'>
                 </div>
                 <div class='row control-group'>
                   <div class='form-group col-xs-12 floating-label-form-group controls'>
                     <label>Wiadomość</label>
-                    <textarea class='form-control' data-validation-required-message='Proszę wpisz treść wiadomości.' id='message' placeholder='Wiadomość' required='' rows='5'></textarea>
+                    <textarea class='form-control' data-validation-required-message='Proszę wpisz treść wiadomości.' id='message' name='message' placeholder='Wiadomość' required='' rows='5'></textarea>
                     <p class='help-block text-danger'></p>
                   </div>
                 </div>
@@ -93,7 +90,7 @@
                   <div id='success'></div>
                   <div class='row'>
                     <div class='form-group col-xs-12'>
-                      <button class='mail-to' type='submit'>Wyślij!</button>
+                      <button class='btn btn mail-to' type='submit'>WYŚLIJ!</button>
                     </div>
                   </div>
                 </br>
@@ -111,11 +108,14 @@
 </div>
 
 
+    
+
     <script src='/js/jquery-1.11.0.js'></script>
 <script src='/js/bootstrap.min.js'></script>
 <script src='/js/jquery.easing.min.js'></script>
 <script src='/js/jqBootstrapValidation.js'></script>
 <script src='/js/contact_me.js'></script>
+<script src='/js/parallax.min.js'></script>
 
   </body>
 
